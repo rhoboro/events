@@ -1,0 +1,2 @@
+flask
+google-cloud-vision==0.34.0
