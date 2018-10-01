@@ -16,9 +16,9 @@
 
     ```sh
     $ gcloud config set project rhoboro-sandbox
+    $ gcloud config set compute/zone asia-northeast1-a
     $ gcloud builds submit --tag gcr.io/rhoboro-sandbox/pyconhiro:latest .
     $ gcloud container clusters create mycluster
-    $ gcloud config set compute/zone asia-northeast1-a
     $ gcloud container clusters get-credentials mycluster
     $ kubectl run mydeployment --image=gcr.io/rhoboro-sandbox/pyconhiro:latest --port:8080
     $ kubectl expose deployment mydeployment --type="LoadBalancer"
@@ -29,5 +29,5 @@
 
     ```sh
     $ kubectl delete service --all
-    $ gcloud container clusters delete
+    $ gcloud container clusters delete mycluster
     ```
