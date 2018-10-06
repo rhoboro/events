@@ -20,7 +20,7 @@
     $ gcloud builds submit --tag gcr.io/rhoboro-sandbox/pyconhiro:latest .
     $ gcloud container clusters create mycluster
     $ gcloud container clusters get-credentials mycluster
-    $ kubectl run mydeployment --image=gcr.io/rhoboro-sandbox/pyconhiro:latest --port:8080
+    $ kubectl run mydeployment --image=gcr.io/rhoboro-sandbox/pyconhiro:latest --port=8080
     $ kubectl expose deployment mydeployment --type="LoadBalancer"
     $ kubectl get service mydeployment
     ```
