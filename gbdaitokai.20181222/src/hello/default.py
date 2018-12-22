@@ -1,5 +1,6 @@
 import click
 
+
 @click.command()
 @click.option('--name',
               default='rhoboro',  # デフォルト値を指定
@@ -7,6 +8,7 @@ import click
               help='your name')
 def cli(name):
     click.echo(f'Hello {name}!')
+
 
 if __name__ == '__main__':
     cli()
