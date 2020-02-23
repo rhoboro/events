@@ -1,5 +1,8 @@
 イベントで使った資料を置いています
 
+* 2020
+  * 02/29: [PyCon mini Shizuoka 2020](./pycon.shizuoka.20200229)
+
 * 2019
   * 09/16-17: [PyCon JP 2019](./pycon.jp.20190917)
 
