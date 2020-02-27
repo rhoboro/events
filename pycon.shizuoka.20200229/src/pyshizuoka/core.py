@@ -7,7 +7,7 @@ from .constants import BASE_URL, SESSIONS_URL
 
 
 @dataclass(frozen=True)
-class _Session:
+class Session:
     title: str
     speaker: str
     level: str
@@ -18,7 +18,7 @@ class _Session:
     @classmethod
     def create(cls, url, soup):
         session_attr = soup.find_all("span", class_="badge")
-        return _Session(
+        return Session(
             url=url,
             title=soup.find("h1", class_="session-title").text,
             speaker=soup.find("address", class_="speaker-name").text.strip().replace("By: ", ""),
@@ -40,11 +40,11 @@ def _get_sessions():
         detail_url = BASE_URL + session.find("a")["href"]
         detail = requests.get(detail_url)
         detail_soup = BeautifulSoup(detail.text, "html.parser")
-        yield _Session.create(detail_url, detail_soup)
+        yield Session.create(detail_url, detail_soup)
 
 
 def scrape():
     yield from _get_sessions()
 
 
-SESSION_FIELDS = [field.name for field in fields(_Session)]
+SESSION_FIELDS = [field.name for field in fields(Session)]
