@@ -7,12 +7,12 @@ from pyshizuoka import SESSION_FIELDS, scrape
 EXCLUDES = ("content",)
 
 
-def to_csv(output, fields, sessions):
+def to_csv(sessions, output, fields):
     with open(output, "w") as f:
         writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()
         for session in sessions:
-            writer.writerow(session.to_dict())
+            writer.writerow(session)
 
 
 def main():
@@ -28,7 +28,8 @@ def main():
     )
 
     args = parser.parse_args()
-    to_csv(args.output, args.fields, scrape())
+    sessions = (session.to_dict() for session in scrape())
+    to_csv(sessions, args.output, args.fields)
 
 
 if __name__ == "__main__":
