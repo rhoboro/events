@@ -1,0 +1,57 @@
+title,speaker,video
+"Talk: Yin Yang Ranch: Building a Distributed Computer Vision Pipeline using Python, OpenCV and ZMQ",Jeff Bass,https://youtu.be/76GGZGneJZ4
+Talk: Developing With Doctests,Jon Crall,https://youtu.be/CUjCqOw_oFk
+Talk: How I Solved my NYC Parking Problem with Python,Jessica Garson,https://youtu.be/bK2iPDu7RDE
+Talk: Comprehensible Comprehensions,Trey Hunner,https://youtu.be/ei71YpmfRX4
+Talk: Snakes in a case: Packaging Python apps for distribution,Russell Keith-Magee,https://youtu.be/WjMDXDHBn1I
+Talk: East Meets West When Translating Django Apps,Andrew Knight,https://youtu.be/OUkzFbzkXy4
+"Talk: What is deployment, anyway?",Katie McLaughlin,https://youtu.be/8vstov3Y7uE
+Talk: Leadership and Identity in the Pan-African Python movement,Marlene Mhangami,https://youtu.be/PQmCADPolOE
+Talk: Implementing Ethics: Developing Trustworthy AI,Carol J. Smith,https://youtu.be/vPokIvli8yk
+Talk: Automate the Boring Stuff with Slackbot,Takanori Suzuki,https://youtu.be/ndi55Ig6-SI
+Talk: Small Big Data: using NumPy and Pandas when your data doesn't fit in memory,Itamar Turner-Trauring,https://youtu.be/8pFnrr0NnwY
+"Talk: Ray: A System for High-performance, Distributed Python Applications",Dean Wampler,https://youtu.be/tqUe0gcfqAU
+Talk: Beautiful Python Refactoring,Conor Hoekstra,https://youtu.be/W-lZttZhsUY
+Talk: Static Typing in Python,Dustin Ingram,https://youtu.be/ST33zDM9vOE
+Talk: Building Docs like Code: Continuous Integration for Documentation,Mason Egger,https://youtu.be/4SwdVMKhbn4
+Talk: Transitioning from developing software to developing people: A firsthand experience,Matthew Knapp Bachmann,https://youtu.be/x7IwVaQgUAM
+Talk: Saved by In-Memory NoSQL - A hitchhiker guided to Black Box debugging of Python Production Code,Deepak Kumar Gupta,https://youtu.be/NjMTf2UWPsw
+Talk: AsyncIO + Music,Łukasz Langa,https://youtu.be/02CLD-42VdI
+Talk: Pyambic Pentameter: generating rhyming and metered poems with Markov chains and NLTK,Kathryn Lingel,https://youtu.be/2ymZVpuqvSc
+Talk: The Hitchhiker's Guide to CLIs in Python,Vinayak Mehta,https://youtu.be/Hn-syMunNy8
+Talk: 9 Years of PyLadies: Lessons Learned and What Comes Next,Lorena Mesa,https://youtu.be/KRwpY2TixAs
+Talk: The Hidden Power of the Python Runtime,Elizaveta Shashkova,https://youtu.be/yr6E7FwK_Hw
+Talk: Organizing To Improve Your Workplace: Know Your Rights,Shauna Gordon-McKeon,https://youtu.be/mWKygyFir54
+Talk: Mixing a Raspberry Pi with Python into a 5th Grade Science Fair Project,Wendi Dreesen,https://youtu.be/YB9aGx5zpto
+Talk: Introduction to Writing Network Tests with pyATS,Hank Preston,https://youtu.be/tFeVdazq0O0
+Talk: C++ ♥ Python: from modules to hybrid applications,Dr. Cristián Maureira-Fredes,https://youtu.be/klCfoGCwmMg
+Talk: 1 + 1 = 1 or Record Deduplication with Python,Flávio Juvenal da Silva Junior,https://youtu.be/eMI8lwQl3Dc
+Talk: Let's talk Databases in Python: SQLAlchemy and Alembic,Hannah Stepanek,https://youtu.be/36yw8VC3KU8
+Talk: Function dissection lab -- learn how functions work by examining their innards,Reuven M. Lerner,https://youtu.be/QR9W81P7yTw
+Talk: The joy of creating art with code.,Neeraj Pandey,https://youtu.be/Xjv1G0suPF8
+Talk: Practical privacy-preserving machine learning in Python,Catherine Nelson,https://youtu.be/NUk6QN02UxQ
+"Talk: How to build an intelligent “indoor garden” with microcontrollers, CircuitPython, and IoT.","Maria Jose Molina-Contreras, phD",https://youtu.be/8STo1-rRV1E
+Talk: Using Python to Detect Vulnerabilities in Binaries,Terri Oda,https://youtu.be/k3fM9KqKfTg
+"Talk: ""Bonjour mademoiselle! Wie geht es dir? Wǒ hěn hǎo. Dhanyawaad"" -How multilingual is your NLP model?",Shreya Khurana,https://youtu.be/hYZQaTeowHQ
+Talk: Big O No: Django ORM runtime complexity and how to avoid it using LATERAL JOINS,Chris Seto,https://youtu.be/GJUL3glrKvA
+Talk: Python in High Energy Physics,Pratyush Das,https://youtu.be/jClVsR6XfdI
+Talk: Privacy-preserving methods: Building secure projects,Rebeca Sarai,https://youtu.be/jKlJEPSZAYo
+Talk: Write Less and Test More with Data Regression Testing,Igor T. Ghisi,https://youtu.be/YBuVGx3EYSY
+Talk: If Statements are a Code Smell,Aly Sivji,https://youtu.be/P0kfKqMHioQ
+Talk: The Limitations and Danger of Facial Recognition,Manojit Nandi,https://youtu.be/OS63Er80KJc
+Talk: A 🐍's guide to Unicode,James Bennett,https://youtu.be/olhKTHFYNxA
+Talk: Building interactive applications for image data with Dash and scikit-image,Emmanuelle Gouillart,https://youtu.be/fnNUMKH6TWI
+"Talk: Goodbye Print, Hello Debugger!",Nina Zakharenko,https://youtu.be/5AYIe-3cD-s
+Talk: Multiply your Testing Effectiveness with Parameterized Testing,Brian K Okken,https://youtu.be/2R1HELARjUk
+"Talk: From 0 to 60 in 2,592,000 seconds: How to quickly get engineers up to speed",Alexandra Sunderland,https://youtu.be/9c0ksQKizts
+Talk: Docker and Python: making them play nicely and securely for Data Science and ML,Tania Allard,https://youtu.be/Jq68axbKIbg
+Talk: Decoding bias and narrative in competitive video games broadcasts with video analysis,Kim-Adeline Miguel,https://youtu.be/0HzbyQPKW9E
+Talk: Why is Python slow?,Anthony Shaw,https://youtu.be/I4nkgJdVZFA
+"Talk: A careful walk through probability distributions, using Python",Eric J. Ma,https://youtu.be/G7SIcvWrAKs
+Talk: Finite State Machine (FSM) in Django,Calvin Hendryx-Parker,https://youtu.be/nG_ZsNxRz0o
+"Talk: “Sorry, Could you repeat that again?” -  Speech Recognition with Python",Javier Jorge Cano,https://youtu.be/D9i1lwC-3ZA
+Talk: Polyglot data with python: Introducing Pandas and Apache Arrow,Robson Luis Monteiro Junior,https://youtu.be/yWR97VkLIzE
+Talk: Deploying Python at Scale with Dask,Matthew Rocklin,
+Talk: Life Beyond Yaml: Bridging Data Science and Data Infrastructure with Apache Airflow,Daniel Imberman,
+Talk: Getting started with automatic differentiation,Colin Carroll,https://youtu.be/NG21KWZSiok
+Talk: Stop Using Mocks (for a while),Harry Percival,
