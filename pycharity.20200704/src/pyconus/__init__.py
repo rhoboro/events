@@ -1,1 +1,1 @@
-from .core import scrape
+from .core import SESSION_FIELDS, scrape

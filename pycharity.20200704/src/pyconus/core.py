@@ -1,4 +1,4 @@
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, fields
 import time
 
 import requests
@@ -33,6 +33,8 @@ class Session:
             content=detail_soup.find(class_="description").text,
             url=url,
         )
+
+SESSION_FIELDS = [field.name for field in fields(Session)]
 
 
 def _get_sessions():

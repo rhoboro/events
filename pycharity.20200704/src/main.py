@@ -1,8 +1,10 @@
 import argparse
 import csv
 
-from pyconus import scrape
+from pyconus import SESSION_FIELDS, scrape
 
+# contentは改行が含まれる文章なのでデフォルトでは除外する
+EXCLUDES = ("content",)
 
 def to_csv(sessions, output, fields):
     with open(output, "w") as f:
@@ -15,7 +17,14 @@ def to_csv(sessions, output, fields):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", default="pyconus.csv")
-    parser.add_argument("--fields", nargs="+")
+    default_fields = [field for field in SESSION_FIELDS if field not in EXCLUDES]
+    parser.add_argument(
+        "--fields",
+        choices=SESSION_FIELDS,
+        nargs="+",
+        default=default_fields,
+        help=f"出力ファイルに含めるフィールド（default: {' '.join(default_fields)}）",
+    )
     args = parser.parse_args()
 
     sessions = (session.to_dict() for session in scrape())
