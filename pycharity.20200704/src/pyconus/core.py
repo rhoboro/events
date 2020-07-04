@@ -27,7 +27,7 @@ class Session:
             video = ""
 
         return Session(
-            title=detail_soup.find("h2").text,
+            title=detail_soup.find("h2").text[6:],
             speaker=detail_soup.find(text="Presented by:").next_element.next_element.text,
             video=video,
             content=detail_soup.find(class_="description").text,
