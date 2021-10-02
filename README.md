@@ -1,9 +1,15 @@
 イベントで使った資料を置いています
 
+* 2021
+  * 09/18: [Open Source Conference 2021 Online/Hiroshima](./osc.hiroshima.20210918/)
+
 * 2020
-  * 02/29: [PyCon mini Shizuoka 2020](./pycon.shizuoka.20200229)
+  * 08/29: [PyCon JP 2020](./pycon.jp.20200829/)
+  * 07/04: [Python Charity Talks in Japan](./pycharity.20200704/)
+  * 02/29: [PyCon mini Shizuoka 2020](./pycon.shizuoka.20200229/)
 
 * 2019
+  * 12/29: [年末岡山ごった煮会](./gottani.20191229/)
   * 09/16-17: [PyCon JP 2019](./pycon.jp.20190917)
 
 * 2018
