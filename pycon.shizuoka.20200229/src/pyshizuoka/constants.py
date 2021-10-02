@@ -1,2 +1,2 @@
 BASE_URL = "https://shizuoka.pycon.jp"
-SESSIONS_URL = BASE_URL + "/category/session/"
+SESSIONS_URL = BASE_URL + "/2020/category/session/"
