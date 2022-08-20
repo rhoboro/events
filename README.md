@@ -1,5 +1,8 @@
 イベントで使った資料を置いています
 
+* 2022
+  * 08/18: [みんなのPython勉強会#84](./startpython.20220818//)
+
 * 2021
   * 10/15-16: [PyCon JP 2021](./pycon.jp.20211016/)
   * 09/18: [Open Source Conference 2021 Online/Hiroshima](./osc.hiroshima.20210918/)
