@@ -11,11 +11,11 @@ if __name__ == "__main__":
 
 ```sh
 $ docker build -t helloworld:pyconjp-2022 .
+
 $ docker run -it -v $(pwd):/app helloworld:pyconjp-2022 python3 hello_world.py
 Hello, world!
 
 $ docker run -it -v $(pwd):/app helloworld:pyconjp-2022 python3 -m tokenize hello_world.py
-
 0,0-0,0:            ENCODING       'utf-8'        
 1,0-1,3:            NAME           'def'          
 1,4-1,9:            NAME           'hello'        
