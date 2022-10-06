@@ -1,6 +1,6 @@
 def hello():
     # This is a comment line
-    print("Hello, world!")
+    print("Hello, world")
 
 
 if __name__ == "__main__":
