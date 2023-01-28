@@ -19,7 +19,7 @@
 - 6月 [Google Cloud Study Jam by GCPUG Okayama](https://gcpug-okayama.connpass.com/event/250606/)
     - 岩田プロとGCPのもくもく会
 - 7月 [Python Boot Camp in 広島 2nd](https://pyconjp.connpass.com/event/248048/)
-    - puhitaku とともにTA
+    - puhitaku, chanyou とともにTA
 - 8月[みんなのPython勉強会](https://startpython.connpass.com/event/248065/)
     - FastAPI の中身の紹介
 - 10月 [PyCon JP 2022](https://2022.pycon.jp/)
