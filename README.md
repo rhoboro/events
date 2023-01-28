@@ -1,6 +1,10 @@
 イベントで使った資料を置いています
 
 * 2022
+  * 01/28: [新年岡山ごった煮会](./gottani.20230128/)
+
+* 2022
+  * 12/09: [Developers CAREER Boost](./developers.career.boost.20221209/)
   * 10/14-15: [PyCon JP 2022](./pycon.jp.20221014/)
   * 08/18: [みんなのPython勉強会#84](./startpython.20220818//)
 

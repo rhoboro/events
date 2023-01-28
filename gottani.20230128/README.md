@@ -1,3 +1,5 @@
+[新年岡山ごった煮会](https://okayama-nanka.connpass.com/event/269163/)の資料です。
+
 # 2022年振り返り
 
 ## 自己紹介
