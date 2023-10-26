@@ -1,0 +1,32 @@
+# Concurrency and async / await
+
+Details about the `async def` syntax for *path operation functions* and some background about asynchronous code, concurrency, and parallelism.
+
+## In a hurry?
+
+<abbr title="too long; didn't read"><strong>TL;DR:</strong></abbr>
+
+If you are using third party libraries that tell you to call them with `await`, like:
+
+```Python
+results = await some_library()
+```
+
+Then, declare your *path operation functions* with `async def` like:
+
+```Python hl_lines="2"
+@app.get('/')
+async def read_results():
+    results = await some_library()
+    return results
+```
+
+!!! note
+    You can only use `await` inside of functions created with `async def`.
+
+---
+
+If you are using a third party library that communicates with something (a database, an API, the file system, etc.) and doesn't have support for using `await`, (this is currently the case for most database libraries), then declare your *path operation functions* as normally, with just `def`, like:
+
+```Python hl_lines="2"
+@

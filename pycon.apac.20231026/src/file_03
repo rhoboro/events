@@ -1,0 +1,40 @@
+# 🛠️ &amp; 🔁 / ⌛
+
+ℹ 🔃 `async def` ❕ *➡ 🛠️ 🔢* &amp; 🖥 🔃 🔁 📟, 🛠️, &amp; 🔁.
+
+## 🏃 ❓
+
+<abbr title="too long; didn't read"><strong>🆑;👩‍⚕️:</strong></abbr>
+
+🚥 👆 ⚙️ 🥉 🥳 🗃 👈 💬 👆 🤙 👫 ⏮️ `await`, 💖:
+
+```Python
+results = await some_library()
+```
+
+⤴️, 📣 👆 *➡ 🛠️ 🔢* ⏮️ `async def` 💖:
+
+```Python hl_lines="2"
+@app.get('/')
+async def read_results():
+    results = await some_library()
+    return results
+```
+
+!!! note
+    👆 💪 🕴 ⚙️ `await` 🔘 🔢 ✍ ⏮️ `async def`.
+
+---
+
+🚥 👆 ⚙️ 🥉 🥳 🗃 👈 🔗 ⏮️ 🕳 (💽, 🛠️, 📁 ⚙️, ♒️.) &amp; 🚫 ✔️ 🐕‍🦺 ⚙️ `await`, (👉 ⏳ 💼 🌅 💽 🗃), ⤴️ 📣 👆 *➡ 🛠️ 🔢* 🛎, ⏮️ `def`, 💖:
+
+```Python hl_lines="2"
+@app.get('/')
+def results():
+    results = some_library()
+    return results
+```
+
+---
+
+🚥 👆 🈸 (😫) 🚫 ✔️ 🔗 ⏮️ �

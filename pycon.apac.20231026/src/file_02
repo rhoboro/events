@@ -1,0 +1,29 @@
+# 並行処理と async / await
+
+*path operation 関数*のための `async def` に関する詳細と非同期 (asynchronous) コード、並行処理 (Concurrency)、そして、並列処理 (Parallelism) の背景について。
+
+## 急いでいますか？
+
+<abbr title="too long; didn't read (長すぎて読めない人のための要約という意味のスラング)"><strong>TL;DR:</strong></abbr>
+
+次のような、`await` を使用して呼び出すべきサードパーティライブラリを使用している場合:
+
+```Python
+results = await some_library()
+```
+
+以下の様に `async def` を使用して*path operation 関数*を宣言します。
+
+```Python hl_lines="2"
+@app.get('/')
+async def read_results():
+    results = await some_library()
+    return results
+```
+
+!!! note "備考"
+    `async def` を使用して作成された関数の内部でしか `await` は使用できません。
+
+---
+
+データベース、API、ファイルシステムなどと通信し、`await`
