@@ -51,7 +51,7 @@ class FileHeader:
     @classmethod
     def parse(cls, filename) -> Self:
         with open(filename, "rb") as f:
-            parsed = unpack(">16sHbbbbbbIIIIIIIIIIII20xII", f.read(HEADER_SIZE))
+            parsed = unpack(">16sHBBBBBBIIIIIIIIIIII20xII", f.read(HEADER_SIZE))
         return FileHeader(*parsed)
 
 

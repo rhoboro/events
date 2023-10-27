@@ -84,14 +84,6 @@ If you are using a third party library that communicates with something (a datab
 ### UTF-8
 
 ```bash
-$ python3 utf_8_encoding.py <(echo -n 'Pρ蛇🐍') 
-raw='01010000', code_point=1010000, P
-raw='11001111 10000001', code_point=1111000001, ρ
-raw='11101000 10011011 10000111', code_point=1000011011000111, 蛇
-raw='11110000 10011111 10010000 10001101', code_point=11111010000001101, 🐍
-```
-
-```bash
 $ python3 cat.py file_02
 # 並行処理と async / await
 
