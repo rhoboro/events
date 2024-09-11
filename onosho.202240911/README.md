@@ -18,6 +18,9 @@ gcc main.c
 python3 concat.py
 ```
 
+- https://docs.python.org/ja/3.11/library/csv.html#csv.DictReader
+
+
 ## 面白い事実
 
 - https://github.com/rhoboro/rustboy
