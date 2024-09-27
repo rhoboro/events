@@ -1,8 +1,9 @@
+import inspect
+import typing
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from functools import wraps
-from inspect import signature
-from typing import Annotated, get_args, get_origin
+from typing import Annotated
 
 
 @dataclass
@@ -41,7 +42,7 @@ def get_dependant(
 ) -> Dependant:
     """CallableをDependantにラップし、Depends()を利用している引数をdependant.dependenciesに格納していく"""
     dependant = Dependant(call=call, name=name, use_cache=use_cache)
-    sig = signature(call)
+    sig = inspect.signature(call)
     # 横向きに Depends() が使われている引数を探索
     for name, param in sig.parameters.items():
         depends = analyze_param(name, param.annotation, param.default)
@@ -65,7 +66,6 @@ def solve_dependencies(
     for sub_dependant in dependant.dependencies:
         call = sub_dependant.call
         solved_result = solve_dependencies(sub_dependant, dependency_cache)
-        sig = signature(sub_dependant.call)
         # キャッシュの利用
         if sub_dependant.use_cache and sub_dependant.call in dependency_cache:
             solved = dependency_cache[sub_dependant.call]
@@ -84,9 +84,9 @@ def solve_dependencies(
 
 def analyze_param(name, annotation, default_value) -> Depends | None:
     """Dependsが使われているパラメータであればそれを返す"""
-    if get_origin(annotation) is Annotated:
+    if typing.get_origin(annotation) is Annotated:
         # Annotated[T, ...] から Depends() を探索
-        annotated_args = get_args(annotation)
+        annotated_args = typing.get_args(annotation)
         depends = [d for d in annotated_args[1:] if isinstance(d, Depends)]
         if depends:
             return depends[0]
