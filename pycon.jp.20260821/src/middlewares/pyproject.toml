@@ -1,0 +1,19 @@
+[project]
+name = "middlewares"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.141.1",
+    "httpx>=0.28.1",
+    "structlog>=26.1.0",
+    "ty>=0.0.71",
+    "uvicorn>=0.52.1",
+    "websockets>=17.0.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.2",
+]

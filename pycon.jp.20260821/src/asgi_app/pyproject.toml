@@ -1,0 +1,17 @@
+[project]
+name = "asgi-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "gunicorn>=26.0.0",
+    "hypercorn>=0.18.0",
+    "uvicorn>=0.52.1",
+    "websockets>=17.0.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.1",
+]
