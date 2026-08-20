@@ -9,7 +9,7 @@ app.add_middleware(ProcessTime)
 
 @app.get("/")
 async def index(request: Request) -> JSONResponse:
-    return JSONResponse({"hello": "world"})
+    return JSONResponse({"hello": "pyconjp"})
 
 
 @app.get("/error")

@@ -4,7 +4,7 @@
 # - gunicornの場合はCtrl+CのSIGINTで即時終了するため、 SIGTERMで終了させること(`kill -TERM PID`など)
 #
 # uv run traffic_mirror.py
-# curl http://127.0.0.1:8000/users/123 -H 'content-type: application/json' -d '{"hello": "world"}'
+# curl http://127.0.0.1:8000/traffic -H 'content-type: application/json' -d '{"hello": "pyconjp"}'
 import asyncio
 import httpx
 

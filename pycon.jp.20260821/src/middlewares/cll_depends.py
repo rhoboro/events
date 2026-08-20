@@ -1,3 +1,5 @@
+# uv run cll_depends.py
+# curl http://127.0.0.1:8000/cll/users/123
 import asyncio
 import logging
 import random
@@ -17,20 +19,19 @@ app.add_middleware(CanonicalLogLine)
 UserId = Annotated[str, Path()]
 
 
-async def bind_user_id(user_id: UserId) -> None:
+# 別スレッドで実行されるため、ミドルウェアと異なるコンテキストになる
+def bind_user_id(user_id: UserId) -> None:
     contextvars.bind_contextvars(user_id=user_id)
 
 
-# 別スレッドで実行されるため、ミドルウェアと異なるコンテキストになる
 @app.get(
-    "/users/{user_id}",
+    "/cll/users/{user_id}",
     dependencies=[Depends(bind_user_id)],
 )
-def sync_get_user(request: Request, user_id: UserId) -> JSONResponse:
-    sleep_time = random.random()
-    time.sleep(sleep_time)
-    structlog.contextvars.bind_contextvars(sleep_time=sleep_time)
-    return JSONResponse({"user": user_id})
+async def get_user(request: Request, user_id: UserId) -> JSONResponse:
+    items = random.randint(0, 100)
+    contextvars.bind_contextvars(items=items)
+    return JSONResponse({"user": user_id, "items": items})
 
 
 if __name__ == "__main__":

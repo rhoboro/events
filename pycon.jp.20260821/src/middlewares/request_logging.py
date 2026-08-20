@@ -6,11 +6,11 @@ from middlewares.request_logging import RequestLoggingMiddleware
 app = FastAPI()
 
 
-@app.get("/")
-@app.post("/")
+@app.get("/logging")
+@app.post("/logging")
 async def index(request: Request) -> JSONResponse:
     print(f"{await request.body()=}")
-    return JSONResponse({"hello": "world"})
+    return JSONResponse({"message": "ok"})
 
 
 app.add_middleware(RequestLoggingMiddleware)

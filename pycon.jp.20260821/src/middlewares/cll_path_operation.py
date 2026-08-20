@@ -1,3 +1,5 @@
+# uv run cll_path_operation.py
+# curl http://127.0.0.1:8000/cll/users/123
 import asyncio
 import logging
 import random
@@ -12,19 +14,6 @@ from middlewares.canonical_log_line import CanonicalLogLine
 
 
 app = FastAPI()
-
-
-# 別の非同期タスクとして実行されるため、上層のミドルウェアと異なるコンテキストになる
-# call_next()が戻り値でresponseを返すために、内部では複数のタスクを並行して動かしている
-@app.middleware("http")
-async def process_time_middleware(request, call_next):
-    from middlewares.process_time import process_time
-
-    with process_time():
-        response = await call_next(request)
-    return response
-
-
 app.add_middleware(CanonicalLogLine)
 
 UserId = Annotated[str, Path()]
@@ -34,15 +23,15 @@ async def bind_user_id(user_id: UserId) -> None:
     contextvars.bind_contextvars(user_id=user_id)
 
 
+# 別スレッドで実行されるため、ミドルウェアと異なるコンテキストになる
 @app.get(
-    "/users/{user_id}",
+    "/cll/users/{user_id}",
     dependencies=[Depends(bind_user_id)],
 )
-async def get_user(request: Request, user_id: UserId) -> JSONResponse:
-    sleep_time = random.random()
-    await asyncio.sleep(sleep_time)
-    contextvars.bind_contextvars(sleep_time=sleep_time)
-    return JSONResponse({"user": user_id})
+def get_user(request: Request, user_id: UserId) -> JSONResponse:
+    items = random.randint(0, 100)
+    contextvars.bind_contextvars(items=items)
+    return JSONResponse({"user": user_id, "items": items})
 
 
 if __name__ == "__main__":

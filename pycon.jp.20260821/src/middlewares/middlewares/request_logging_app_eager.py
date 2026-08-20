@@ -1,5 +1,6 @@
 # uv run request_logging_app_eager.py
-# curl http://127.0.0.1:8000 -H 'content-type: application/json' -d '{"hello": "world"}'
+# curl http://127.0.0.1:8000/request/logging -H 'content-type: application/json' -d '{"hello": "pyconjp"}'
+# curl http://127.0.0.1:8000/request/logging/eager -H 'content-type: application/json' -d '{"hello": "pyconjp"}'
 import json
 from starlette.requests import Request
 from starlette.datastructures import MutableHeaders
@@ -35,7 +36,7 @@ class LoggingApp:
         self.send = send
 
         if self.is_request_json:
-            receive = self.eager_receive(receive)
+            receive = await self.eager_receive(receive)
 
         await self.app(scope, receive, self.my_send)
 

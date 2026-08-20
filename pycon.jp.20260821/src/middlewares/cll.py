@@ -1,3 +1,5 @@
+# uv run cll.py
+# curl http://127.0.0.1:8000/cll/users/123
 import logging
 import random
 import time
@@ -21,7 +23,7 @@ async def bind_user_id(user_id: UserId) -> None:
 
 
 @app.get(
-    "/users/{user_id}",
+    "/cll/users/{user_id}",
     dependencies=[Depends(bind_user_id)],
 )
 async def get_user(request: Request, user_id: UserId) -> JSONResponse:

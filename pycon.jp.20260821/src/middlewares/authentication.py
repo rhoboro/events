@@ -6,7 +6,7 @@ app = FastAPI()
 app.add_middleware(Authentication, auth_backend=basic_auth)
 
 
-@app.get("/")
+@app.get("/auth")
 async def index(request: Request) -> JSONResponse:
     return JSONResponse({"user": request.state.user})
 

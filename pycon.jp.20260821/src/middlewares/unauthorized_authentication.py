@@ -7,9 +7,9 @@ app = FastAPI()
 app.add_middleware(UnauthorizedAuthentication, auth_backend=basic_auth)
 
 
-@app.get("/")
+@app.get("/auth")
 async def index(request: Request) -> JSONResponse:
-    return JSONResponse({"hello": "world"})
+    return JSONResponse({"message": "ok"})
 
 
 if __name__ == "__main__":

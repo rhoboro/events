@@ -1,7 +1,10 @@
 # uv run unauthorized_authentication.py
+# curl http://127.0.0.1:8000/auth
+# curl http://127.0.0.1:8000/auth -u rhoboro:secret
+#
 # uv run authentication.py
-# curl http://127.0.0.1:8000
-# curl http://127.0.0.1:8000 -u rhoboro:secret
+# curl http://127.0.0.1:8000/auth -u rhoboro:secret
+# curl http://127.0.0.1:8000/auth -u rhoboro:invalid
 import base64
 from collections.abc import Callable
 

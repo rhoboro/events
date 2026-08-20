@@ -7,11 +7,14 @@ app = FastAPI()
 app.add_middleware(RequestLoggingMiddleware)
 
 
-@app.get("/")
-@app.post("/")
+@app.post("/logging")
 async def index(request: Request) -> JSONResponse:
     print(f"{await request.body()=}")
-    return JSONResponse({"hello": "world"})
+    return JSONResponse({"message": "ok"})
+
+@app.post("/logging/not_use_body")
+async def index(request: Request) -> JSONResponse:
+    return JSONResponse({"message": "ok"})
 
 
 if __name__ == "__main__":

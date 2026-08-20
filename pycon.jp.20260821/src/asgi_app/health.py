@@ -1,8 +1,3 @@
-# uv run uvicorn health:app
-# uv run gunicorn health:app --worker-class asgi --access-logfile -
-# curl http://127.0.0.1:8000/health
-# curl -i http://127.0.0.1:8000 -d 'spam=ham'
-# fmt: off
 async def app(scope, receive, send):
     assert scope["type"] == "http"
 

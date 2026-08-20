@@ -9,7 +9,7 @@ app.add_middleware(HealthCheck)
 
 @app.get("/")
 async def index(request: Request) -> JSONResponse:
-    return JSONResponse({"hello": "world"})
+    return JSONResponse({"hello": "pyconjp"})
 
 
 if __name__ == "__main__":
