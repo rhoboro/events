@@ -19,9 +19,12 @@ class TrafficMirrorMiddleware:
         if scope["type"] == "lifespan":
             await self.lifespan_app(scope, receive, send)
             return
+
         if scope["type"] != "http":
+            # WebSocket はスルー
             await self.app(scope, receive, send)
             return
+
         app = MirrorApp(self.app)
         await app(scope, receive, send)
 
